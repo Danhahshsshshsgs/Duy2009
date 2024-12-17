@@ -1,0 +1,45 @@
+import time
+import sys
+
+def delay_print(text, delay=0.1):
+    """In từng ký tự với độ trễ nhất định để tạo hiệu ứng"""
+    for char in text:
+        sys.stdout.write(char)
+        sys.stdout.flush()
+        time.sleep(delay)
+
+def main():
+    # Màn hình chào mừng
+    print("\033c", end="")  # Xóa màn hình (works for Linux/Mac)
+
+    # Thiết kế thiệp
+    delay_print("*******************************\n", 0.1)
+    delay_print("*                             *\n", 0.1)
+    delay_print("*   Chuc Mung Sinh Nhat Duy!  *\n", 0.1)
+    delay_print("*                             *\n", 0.1)
+    delay_print("*******************************\n", 0.1)
+
+    # Thêm khoảng trắng
+    print("\n\n")
+    
+    # Hiệu ứng chữ "🎂"
+    delay_print("       Happy Birthday Duy! 🎂\n", 0.2)
+    
+    # Chúc mừng sinh nhật
+    delay_print("\nChuc Duy mot ngay sinh nhat vui ve,\n", 0.1)
+    delay_print("tran ngap hanh phuc, va yen vui!\n", 0.1)
+    
+    # Số tuổi
+    print("\nDuy da 15 tuoi !!!\n")
+    delay_print("********************************\n", 0.1)
+    delay_print("*                              *\n", 0.1)
+    delay_print("*     Hy vong ban co mot        *\n", 0.1)
+    delay_print("*    cuoc song tuyet voi!       *\n", 0.1)
+    delay_print("*                              *\n", 0.1)
+    delay_print("********************************\n", 0.1)
+
+    # Hiệu ứng kết thúc
+    print("\nNhieu niềm vui và ước mơ sẽ thành công!\n")
+
+if __name__ == "__main__":
+    main()
